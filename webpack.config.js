@@ -4,7 +4,6 @@ module.exports = {
   mode: 'development',
   target: 'web',
   entry: './src/index.js',
-  watch: true,
   watchOptions: {
     ignored: 'node_modules/**',
   },

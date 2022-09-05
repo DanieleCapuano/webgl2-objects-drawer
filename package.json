@@ -6,7 +6,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "build": "rimraf dist && webpack --config webpack.config.js",
+    "build-watch": "rimraf dist && webpack -w --config webpack.config.js"
   },
   "dependencies": {
     "webpack": "^5.74.0",

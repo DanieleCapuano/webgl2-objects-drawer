@@ -2,6 +2,7 @@ import glm from "glm-js";
 
 import * as square_mod from "../data/square.json";
 import * as scene_mod from "../data/scene.json";
+import * as T from './transforms';
 
 import { init_scene_webgl, run_program, stop_program } from "./webgl_scene";
 
@@ -52,6 +53,12 @@ function _stop() {
 
 function _init_scene_struct(objects, scene_desc) {
     let obj_list = _init_objects(objects);
+
+    console.info("TRANSLATE");
+    let v = glm.vec4(1),
+        v_t = T.scale(v, glm.vec3(.5)),
+        v_tt = T.translate(v_t, glm.vec3(.5));
+    console.info("SCALED 1", v_t, v_tt);
 
     let model_view = glm.mat4(1);
     let projection = glm.mat4(1);
