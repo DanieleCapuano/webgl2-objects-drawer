@@ -1,0 +1,82 @@
+{
+    "id": "square_1",
+    "type": "square",
+    "number_of_points": 6,
+    "primitive": "TRIANGLES",
+    "coords_dim": 3,
+    "program_info_def": {
+        "shaders": {
+            "vertex": {
+                "url": "/data/shaders/square.vert.glsl"
+            },
+            "fragment": {
+                "url": "/data/shaders/square.frag.glsl"
+            }
+        },
+        "shaders_data": {
+            "attributes": {
+                "a_position": {
+                    "name": "a_position",
+                    "opts": {
+                        "data_type": "FLOAT",
+                        "normalized": false,
+                        "stride": 0,
+                        "offset": 0
+                    }
+                }
+            },
+            "uniforms": {
+                "u_time": {
+                    "name": "u_time",
+                    "opts": {
+                        "fn": "1f"
+                    }
+                },
+                "u_modelview": {
+                    "name": "u_modelview",
+                    "opts": {
+                        "fn": "Matrix4fv"
+                    }
+                },
+                "u_projection": {
+                    "name": "u_projection",
+                    "opts": {
+                        "fn": "Matrix4fv"
+                    }
+                }
+            }
+        }
+    },
+    "coordinates_def": [
+        [
+            -0.5,
+            -0.5,
+            0.5
+        ],
+        [
+            -0.5,
+            0.5,
+            0.5
+        ],
+        [
+            0.5,
+            -0.5,
+            0.5
+        ],
+        [
+            -0.5,
+            0.5,
+            0.5
+        ],
+        [
+            0.5,
+            0.5,
+            0.5
+        ],
+        [
+            0.5,
+            -0.5,
+            0.5
+        ]
+    ]
+}

@@ -1,2 +1,2 @@
 # computer-graphics-experiments
-A set of experiments about computer graphics algorithms and techniques
+A simple library which allows to draw a list of objects using a set of JSON configuration files. See the test folder to check a complete example of how to use it.

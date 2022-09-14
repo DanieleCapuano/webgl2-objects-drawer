@@ -1,0 +1,35 @@
+{
+    "camera": {
+        "position": [
+            0,
+            0,
+            5
+        ],
+        "center": [
+            0,
+            0,
+            0
+        ],
+        "up": [
+            0,
+            1,
+            0
+        ]
+    },
+    "square_1": {
+        "transforms": [
+            {
+                "type": "translate",
+                "amount": [0.5, 0.4, 3.2]
+            },
+            {
+                "type": "rotate",
+                "amount": [45, 80, 10]
+            },
+            {
+                "type": "scale",
+                "amount": [2, 2, 2]
+            }
+        ]
+    }
+}

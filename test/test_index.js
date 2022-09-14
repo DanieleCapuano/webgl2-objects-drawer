@@ -1,5 +1,5 @@
-import "../style/main.scss";
-import { init_scene, run_scene, stop_scene } from "./scene";
+import "./style/main.scss";
+import { init_data, init_scene, run_scene, stop_scene } from "od";
 
 /*********************************************************************
  * main module, which manages DOM events and interactions and triggers
@@ -21,9 +21,16 @@ function _onload() {
         return;
     }
 
-    init_scene(canvas);
+    init_data({
+        objects_desc_url: "/data/objects_def.json",
+        scene_desc_url: "/data/scene.json"
+    }).then(desc => {
+        canvas.setAttribute('width', window.innerWidth);
+        canvas.setAttribute('height', window.innerHeight);
+        init_scene(canvas, desc);
 
-    start_btn.addEventListener('click', run_scene);
-    stop_btn.addEventListener('click', stop_scene);
+        start_btn.addEventListener('click', run_scene);
+        stop_btn.addEventListener('click', stop_scene);
+    });
 
 }

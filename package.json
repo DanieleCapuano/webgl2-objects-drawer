@@ -1,13 +1,17 @@
 {
-  "name": "webgl-basic",
+  "name": "od",
   "version": "1.0.0",
-  "main": "./dist/bundle.js",
+  "main": "index.js",
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "rimraf dist && webpack --config webpack.config.js",
-    "build-watch": "rimraf dist && webpack -w --config webpack.config.js"
+    "build-watch": "rimraf dist && webpack -w --config webpack.config.js",
+    "install-test": "cd test && npm i",
+    "build-test": "cd test && rimraf dist && webpack --config webpack.config_test.js",
+    "build-test-watch": "cd test && rimraf dist && webpack -w --config webpack.config_test.js",
+    "test": "npm run build-test && cd test && http-server . -p 3133 -o"
   },
   "dependencies": {
     "webpack": "^5.74.0",
@@ -16,7 +20,8 @@
     "style-loader": "^3.3.1",
     "sass-loader": "^13.0.2",
     "node-sass": "^7.0.1",
-    "webpack-glsl-loader": "^1.0.1"
+    "webpack-glsl-loader": "^1.0.1",
+    "http-server": "^14.1.1"
   },
   "devDependencies": {
     "glm-js": "^0.0.6-c"

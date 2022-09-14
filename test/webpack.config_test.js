@@ -3,12 +3,9 @@ const path = require('path');
 module.exports = [{
   mode: 'development',
   target: 'web',
-  entry: './index.js',
+  entry: './test_index.js',
   output: {
-    filename: "od.js",
-    library: 'od',
-    libraryTarget: 'umd',
-    libraryExport: "od"
+    filename: "main.js",
   },
   watchOptions: {
     ignored: 'node_modules/**',
